@@ -1,4 +1,4 @@
-from connect import connectDB, connect_mysql, fetch_data_from_mongodb, create_table_and_insert_data
+from connect import connectDB, connect_mysql
 import bson
 import random
 
@@ -39,10 +39,10 @@ def main():
             "Age": 45,
             "Gender": "Male",
             "Nationality": "American",
-            "Known Languages": "English, Spanish",
-            "Vehicle restriction": "Boeing 747, Airbus A320",
+            "Known_Languages": "English, Spanish",
+            "Vehicle_Restriction": "Boeing 747, Airbus A320",
             "Seniority": "senior",
-            "Pilot Travel Range": "Long-haul",
+            "Pilot_Travel_Range": "Long-haul",
             "Availability": "2024-06-01,2024-06-03,2024-06-05,2024-06-07,2024-06-09"
         },
         {
@@ -52,10 +52,10 @@ def main():
             "Age": 38,
             "Gender": "Female",
             "Nationality": "British",
-            "Known Languages": "English, French",
-            "Vehicle restriction": "Boeing 777, Airbus A380",
+            "Known_Languages": "English, French",
+            "Vehicle_Restriction": "Boeing 777, Airbus A380",
             "Seniority": "junior",
-            "Pilot Travel Range": "Short-haul",
+            "Pilot_Travel_Range": "Short-haul",
             "Availability": "2024-06-02,2024-06-04,2024-06-06,2024-06-08,2024-06-10"
         },
         {
@@ -65,10 +65,10 @@ def main():
             "Age": 50,
             "Gender": "Male",
             "Nationality": "Spanish",
-            "Known Languages": "Spanish, English",
-            "Vehicle restriction": "Airbus A330",
+            "Known_Languages": "Spanish, English",
+            "Vehicle_Restriction": "Airbus A330",
             "Seniority": "senior",
-            "Pilot Travel Range": "Long-haul",
+            "Pilot_Travel_Range": "Long-haul",
             "Availability": "2024-06-01,2024-06-04,2024-06-07,2024-06-10,2024-06-13"
         },
         {
@@ -78,10 +78,10 @@ def main():
             "Age": 33,
             "Gender": "Female",
             "Nationality": "French",
-            "Known Languages": "French, English",
-            "Vehicle restriction": "Boeing 787",
+            "Known_Languages": "French, English",
+            "Vehicle_Restriction": "Boeing 787",
             "Seniority": "trainee",
-            "Pilot Travel Range": "Short-haul",
+            "Pilot_Travel_Range": "Short-haul",
             "Availability": "2024-06-02,2024-06-05,2024-06-08,2024-06-11,2024-06-14"
         },
         {
@@ -91,10 +91,10 @@ def main():
             "Age": 48,
             "Gender": "Male",
             "Nationality": "Chinese",
-            "Known Languages": "Mandarin, English",
-            "Vehicle restriction": "Airbus A350",
+            "Known_Languages": "Mandarin, English",
+            "Vehicle_Restriction": "Airbus A350",
             "Seniority": "junior",
-            "Pilot Travel Range": "Long-haul",
+            "Pilot_Travel_Range": "Long-haul",
             "Availability": "2024-06-01,2024-06-03,2024-06-06,2024-06-09,2024-06-12"
         },
         {
@@ -104,10 +104,10 @@ def main():
             "Age": 40,
             "Gender": "Female",
             "Nationality": "Moroccan",
-            "Known Languages": "Arabic, French, English",
-            "Vehicle restriction": "Boeing 747",
+            "Known_Languages": "Arabic, French, English",
+            "Vehicle_Restriction": "Boeing 747",
             "Seniority": "senior",
-            "Pilot Travel Range": "Long-haul",
+            "Pilot_Travel_Range": "Long-haul",
             "Availability": "2024-06-02,2024-06-04,2024-06-06,2024-06-08,2024-06-10"
         },
         {
@@ -117,10 +117,10 @@ def main():
             "Age": 35,
             "Gender": "Male",
             "Nationality": "Australian",
-            "Known Languages": "English",
-            "Vehicle restriction": "Boeing 737, Airbus A320",
+            "Known_Languages": "English",
+            "Vehicle_Restriction": "Boeing 737, Airbus A320",
             "Seniority": "junior",
-            "Pilot Travel Range": "Short-haul",
+            "Pilot_Travel_Range": "Short-haul",
             "Availability": "2024-06-03,2024-06-06,2024-06-09,2024-06-12,2024-06-15"
         },
         {
@@ -130,10 +130,10 @@ def main():
             "Age": 30,
             "Gender": "Female",
             "Nationality": "Mexican",
-            "Known Languages": "Spanish, English",
-            "Vehicle restriction": "Airbus A380",
+            "Known_Languages": "Spanish, English",
+            "Vehicle_Restriction": "Airbus A380",
             "Seniority": "trainee",
-            "Pilot Travel Range": "Long-haul",
+            "Pilot_Travel_Range": "Long-haul",
             "Availability": "2024-06-04,2024-06-07,2024-06-10,2024-06-13,2024-06-16"
         },
         {
@@ -143,10 +143,10 @@ def main():
             "Age": 42,
             "Gender": "Male",
             "Nationality": "Egyptian",
-            "Known Languages": "Arabic, English",
-            "Vehicle restriction": "Boeing 787",
+            "Known_Languages": "Arabic, English",
+            "Vehicle_Restriction": "Boeing 787",
             "Seniority": "junior",
-            "Pilot Travel Range": "Short-haul",
+            "Pilot_Travel_Range": "Short-haul",
             "Availability": "2024-06-02,2024-06-05,2024-06-08,2024-06-11,2024-06-14"
         },
         {
@@ -156,10 +156,10 @@ def main():
             "Age": 37,
             "Gender": "Female",
             "Nationality": "Ghanaian",
-            "Known Languages": "English, French",
-            "Vehicle restriction": "Airbus A350",
+            "Known_Languages": "English, French",
+            "Vehicle_Restriction": "Airbus A350",
             "Seniority": "senior",
-            "Pilot Travel Range": "Long-haul",
+            "Pilot_Travel_Range": "Long-haul",
             "Availability": "2024-06-01,2024-06-04,2024-06-07,2024-06-10,2024-06-13"
         }
     ]
@@ -175,11 +175,11 @@ def main():
         "Age": "Enter Age: ",
         "Gender": "Enter Gender: ",
         "Nationality": "Enter Nationality of Pilot: ",
-        "Known Languages": "Enter Known languages: ",
-        "Vehicle restriction": "Enter Vehicle restriction: ",
+        "Known_Languages": "Enter Known languages: ",
+        "Vehicle_Restriction": "Enter Vehicle restriction: ",
         "Seniority": "Enter Seniority Level (senior, junior, trainee): ",
-        "Pilot Travel Range": "Enter Max distance that pilot can be assigned to: ",
-        "Pilot Availability": "Enter Pilot's Availability Dates: (comma-separated, YYYY-MM-DD) ",
+        "Pilot_Travel_Range": "Enter Max distance that pilot can be assigned to: ",
+        "Availability": "Enter Pilot's Availability Dates: (comma-separated, YYYY-MM-DD) ",
 
     }
 
@@ -199,5 +199,5 @@ def main():
     #     else:
     #         print(f"No data found in MongoDB collection '{collection_name}'")
     #
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()
