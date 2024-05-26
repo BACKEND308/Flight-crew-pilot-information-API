@@ -161,12 +161,142 @@ def main():
             "Seniority": "senior",
             "Pilot_Travel_Range": "Long-haul",
             "Availability": "2024-06-01,2024-06-04,2024-06-07,2024-06-10,2024-06-13"
+        },
+        {
+            "PilotID": 11,
+            "PilotName": "Benjamin Lee",
+            "LicenseNumber": "K12345",
+            "Age": 43,
+            "Gender": "Male",
+            "Nationality": "Canadian",
+            "Known_Languages": "English, French",
+            "Vehicle_Restriction": "Boeing 737",
+            "Seniority": "senior",
+            "Pilot_Travel_Range": "Long-haul",
+            "Availability": "2024-06-01,2024-06-03,2024-06-05,2024-06-07,2024-06-09"
+        },
+        {
+            "PilotID": 12,
+            "PilotName": "Nina Williams",
+            "LicenseNumber": "L23456",
+            "Age": 36,
+            "Gender": "Female",
+            "Nationality": "British",
+            "Known_Languages": "English, German",
+            "Vehicle_Restriction": "Airbus A320",
+            "Seniority": "junior",
+            "Pilot_Travel_Range": "Short-haul",
+            "Availability": "2024-06-02,2024-06-04,2024-06-06,2024-06-08,2024-06-10"
+        },
+        {
+            "PilotID": 13,
+            "PilotName": "Kenji Yamamoto",
+            "LicenseNumber": "M34567",
+            "Age": 47,
+            "Gender": "Male",
+            "Nationality": "Japanese",
+            "Known_Languages": "Japanese, English",
+            "Vehicle_Restriction": "Boeing 777",
+            "Seniority": "senior",
+            "Pilot_Travel_Range": "Long-haul",
+            "Availability": "2024-06-01,2024-06-03,2024-06-05,2024-06-07,2024-06-09"
+        },
+        {
+            "PilotID": 14,
+            "PilotName": "Isabella Rossi",
+            "LicenseNumber": "N45678",
+            "Age": 39,
+            "Gender": "Female",
+            "Nationality": "Italian",
+            "Known_Languages": "Italian, English",
+            "Vehicle_Restriction": "Airbus A330",
+            "Seniority": "junior",
+            "Pilot_Travel_Range": "Short-haul",
+            "Availability": "2024-06-02,2024-06-04,2024-06-06,2024-06-08,2024-06-10"
+        },
+        {
+            "PilotID": 15,
+            "PilotName": "Ethan Brown",
+            "LicenseNumber": "O56789",
+            "Age": 34,
+            "Gender": "Male",
+            "Nationality": "American",
+            "Known_Languages": "English",
+            "Vehicle_Restriction": "Boeing 787",
+            "Seniority": "trainee",
+            "Pilot_Travel_Range": "Short-haul",
+            "Availability": "2024-06-03,2024-06-05,2024-06-07,2024-06-09,2024-06-11"
+        },
+        {
+            "PilotID": 16,
+            "PilotName": "Hannah Müller",
+            "LicenseNumber": "P67890",
+            "Age": 41,
+            "Gender": "Female",
+            "Nationality": "German",
+            "Known_Languages": "German, English",
+            "Vehicle_Restriction": "Airbus A350",
+            "Seniority": "senior",
+            "Pilot_Travel_Range": "Long-haul",
+            "Availability": "2024-06-01,2024-06-03,2024-06-05,2024-06-07,2024-06-09"
+        },
+        {
+            "PilotID": 17,
+            "PilotName": "Muhammad Ali",
+            "LicenseNumber": "Q78901",
+            "Age": 45,
+            "Gender": "Male",
+            "Nationality": "Pakistani",
+            "Known_Languages": "Urdu, English",
+            "Vehicle_Restriction": "Boeing 747",
+            "Seniority": "junior",
+            "Pilot_Travel_Range": "Long-haul",
+            "Availability": "2024-06-02,2024-06-04,2024-06-06,2024-06-08,2024-06-10"
+        },
+        {
+            "PilotID": 18,
+            "PilotName": "Sara Gonzalez",
+            "LicenseNumber": "R89012",
+            "Age": 38,
+            "Gender": "Female",
+            "Nationality": "Spanish",
+            "Known_Languages": "Spanish, English",
+            "Vehicle_Restriction": "Airbus A320",
+            "Seniority": "trainee",
+            "Pilot_Travel_Range": "Short-haul",
+            "Availability": "2024-06-03,2024-06-05,2024-06-07,2024-06-09,2024-06-11"
+        },
+        {
+            "PilotID": 19,
+            "PilotName": "Liam Patel",
+            "LicenseNumber": "S90123",
+            "Age": 32,
+            "Gender": "Male",
+            "Nationality": "Indian",
+            "Known_Languages": "Hindi, English",
+            "Vehicle_Restriction": "Boeing 777",
+            "Seniority": "junior",
+            "Pilot_Travel_Range": "Long-haul",
+            "Availability": "2024-06-02,2024-06-04,2024-06-06,2024-06-08,2024-06-10"
+        },
+        {
+            "PilotID": 20,
+            "PilotName": "Chloe Wilson",
+            "LicenseNumber": "T01234",
+            "Age": 29,
+            "Gender": "Female",
+            "Nationality": "Australian",
+            "Known_Languages": "English",
+            "Vehicle_Restriction": "Boeing 737",
+            "Seniority": "trainee",
+            "Pilot_Travel_Range": "Short-haul",
+            "Availability": "2024-06-01,2024-06-03,2024-06-05,2024-06-07,2024-06-09"
         }
     ]
 
-    for pilot_data in pilot_samples:
-        insert_pilot(db, pilot_data)
-        print(f"Inserted {pilot_data['PilotName']} with ID: {pilot_data['PilotID']}")
+    # for pilot_data in pilot_samples:
+    #     insert_pilot(db, pilot_data)
+    #     print(f"Inserted {pilot_data['PilotName']} with ID: {pilot_data['PilotID']}")
 
     pilot_prompts = {
         "PilotID": "Enter Pilot ID: ",
@@ -201,3 +331,4 @@ def main():
     #
 if __name__ == '__main__':
     main()
+
