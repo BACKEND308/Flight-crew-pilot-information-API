@@ -1,15 +1,18 @@
 import mongoose from 'mongoose';
 
 const PilotSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  age: { type: Number, required: true },
-  gender: { type: String, required: true },
-  nationality: { type: String, required: true },
-  known_languages: { type: [String], required: true },
-  vehicle_restriction: { type: String, required: true },
-  allowed_range: { type: Number, required: true },
-  seniority_level: { type: String, enum: ['senior', 'junior', 'trainee'], required: true }
-});
+  PilotID: { type: Number, required: true },
+  PilotName: { type: String, required: true },
+  LicenseNumber: { type: String, required: true },
+  Age: { type: Number, required: true },
+  Availability: { type: [String], required: true },
+  Gender: { type: String, required: true },
+  Known_Languages: { type: [String], required: true },
+  Nationality: { type: String, required: true },
+  Pilot_Travel_Range: { type: String, required: true },
+  Seniority: { type: String, enum: ['senior', 'junior', 'trainee'], required: true },
+  Vehicle_Restriction: { type: String, required: true }
+},{collection:'pilots'});
 
 const Pilot = mongoose.model('Pilot', PilotSchema);
 export default Pilot;
